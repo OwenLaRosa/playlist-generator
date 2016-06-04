@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="Track" syncable="YES">
-        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Track" representedClassName=".Track" syncable="YES">
+        <attribute name="artist" attributeType="String" syncable="YES"/>
         <attribute name="becomesOld" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="firstAdded" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstAdded" attributeType="Date" syncable="YES"/>
         <attribute name="lastPlayed" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="new" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="new" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Track" positionX="-63" positionY="-18" width="128" height="150"/>
