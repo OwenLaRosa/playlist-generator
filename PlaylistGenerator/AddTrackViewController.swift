@@ -88,13 +88,13 @@ class AddTrackViewController: NSViewController {
     
     private func getArtistWithName(name: String) -> Artist {
         let fetchRequest = NSFetchRequest(entityName: "Artist")
-        fetchRequest.predicate = NSPredicate(format: "name == %s", name)
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
         return try! context.executeFetchRequest(fetchRequest)[0] as! Artist
     }
     
     private func getCategoryWithName(name: String) -> Category {
         let fetchRequest = NSFetchRequest(entityName: "Category")
-        fetchRequest.predicate = NSPredicate(format: "name == %s", name)
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
         return try! context.executeFetchRequest(fetchRequest)[0] as! Category
     }
     
