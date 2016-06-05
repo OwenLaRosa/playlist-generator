@@ -77,7 +77,7 @@ class AddTrackViewController: NSViewController {
         } else {
             category = getCategoryWithName(typeComboBox.stringValue)
         }
-        let becomesOld = NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue))
+        let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue)) : nil
         let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
         track.type = category
         do {
