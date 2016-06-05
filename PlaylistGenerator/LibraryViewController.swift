@@ -54,7 +54,7 @@ extension LibraryViewController: NSTableViewDelegate {
         } else if tableColumn == tableView.tableColumns[2] {
             cell.textField?.stringValue = track.type.name
         }
-        return nil
+        return cell
     }
     
 }
