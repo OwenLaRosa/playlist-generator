@@ -57,6 +57,14 @@ class AddTrackViewController: NSViewController {
             alert.runModal()
             return
         }
+        if newCheckBox.state == 1 && becomesOldTextField.intValue <= 0 {
+            let alert = NSAlert()
+            alert.alertStyle = .InformationalAlertStyle
+            alert.messageText = "Oops!"
+            alert.informativeText = "New tracks must remain new for at least 1 day."
+            alert.runModal()
+            return
+        }
     }
     
     
