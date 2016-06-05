@@ -65,7 +65,37 @@ class AddTrackViewController: NSViewController {
             alert.runModal()
             return
         }
+        var artist: Artist
+        var category: Category
+        if !artistNames.contains(artistComboBox.stringValue) {
+            artist = Artist(name: artistComboBox.stringValue, context: context)
+        } else {
+            artist = getArtistWithName(artistComboBox.stringValue)
+        }
+        if !categoryNames.contains(typeComboBox.stringValue) {
+            category = Category(name: typeComboBox.stringValue, context: context)
+        } else {
+            category = getCategoryWithName(typeComboBox.stringValue)
+        }
+        let becomesOld = NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue))
+        let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
+        track.type = category
+        do {
+            try context.save()
+        } catch {}
+        dismissController(nil)
     }
     
+    private func getArtistWithName(name: String) -> Artist {
+        let fetchRequest = NSFetchRequest(entityName: "Artist")
+        fetchRequest.predicate = NSPredicate(format: "name == %s", name)
+        return try! context.executeFetchRequest(fetchRequest)[0] as! Artist
+    }
+    
+    private func getCategoryWithName(name: String) -> Category {
+        let fetchRequest = NSFetchRequest(entityName: "Category")
+        fetchRequest.predicate = NSPredicate(format: "name == %s", name)
+        return try! context.executeFetchRequest(fetchRequest)[0] as! Category
+    }
     
 }
