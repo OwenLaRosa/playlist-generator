@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A08FF631D036BF500D6C66A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08FF621D036BF500D6C66A /* AppDelegate.swift */; };
-		5A08FF651D036BF500D6C66A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08FF641D036BF500D6C66A /* ViewController.swift */; };
+		5A08FF651D036BF500D6C66A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08FF641D036BF500D6C66A /* LibraryViewController.swift */; };
 		5A08FF681D036BF500D6C66A /* PlaylistGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A08FF661D036BF500D6C66A /* PlaylistGenerator.xcdatamodeld */; };
 		5A08FF6A1D036BF500D6C66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A08FF691D036BF500D6C66A /* Assets.xcassets */; };
 		5A08FF6D1D036BF500D6C66A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A08FF6B1D036BF500D6C66A /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		5A08FF5F1D036BF500D6C66A /* PlaylistGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A08FF621D036BF500D6C66A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A08FF641D036BF500D6C66A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A08FF641D036BF500D6C66A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		5A08FF671D036BF500D6C66A /* PlaylistGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaylistGenerator.xcdatamodel; sourceTree = "<group>"; };
 		5A08FF691D036BF500D6C66A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A08FF6C1D036BF500D6C66A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				5A08FF621D036BF500D6C66A /* AppDelegate.swift */,
 				5A08FF741D036DA200D6C66A /* Track.swift */,
-				5A08FF641D036BF500D6C66A /* ViewController.swift */,
+				5A08FF641D036BF500D6C66A /* LibraryViewController.swift */,
 				5A08FF691D036BF500D6C66A /* Assets.xcassets */,
 				5A08FF6B1D036BF500D6C66A /* Main.storyboard */,
 				5A08FF6E1D036BF500D6C66A /* Info.plist */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A08FF651D036BF500D6C66A /* ViewController.swift in Sources */,
+				5A08FF651D036BF500D6C66A /* LibraryViewController.swift in Sources */,
 				5A08FF631D036BF500D6C66A /* AppDelegate.swift in Sources */,
 				5A08FF681D036BF500D6C66A /* PlaylistGenerator.xcdatamodeld in Sources */,
 				5A08FF751D036DA300D6C66A /* Track.swift in Sources */,
