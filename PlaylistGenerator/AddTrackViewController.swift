@@ -45,6 +45,14 @@ class AddTrackViewController: NSViewController {
     }
     
     @IBAction func addButton(sender: AnyObject) {
+        if titleTextField.stringValue == "" || artistComboBox.stringValue == "" || typeComboBox.stringValue == "" {
+            let alert = NSAlert()
+            alert.alertStyle = .InformationalAlertStyle
+            alert.messageText = "Oops!"
+            alert.informativeText = "One or more required fields are empty. Please try again."
+            alert.runModal()
+            return
+        }
     }
     
     
