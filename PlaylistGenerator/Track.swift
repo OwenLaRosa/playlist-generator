@@ -11,7 +11,7 @@ import CoreData
 class Track: NSManagedObject {
     
     @NSManaged var title: String
-    @NSManaged var artist: String
+    @NSManaged var artist: Artist
     @NSManaged var type: String
     @NSManaged var new: Bool
     @NSManaged var firstAdded: NSDate
@@ -22,7 +22,7 @@ class Track: NSManagedObject {
         super.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
-    init(title: String, artist: String, new: Bool, becomesOld: NSDate?, context: NSManagedObjectContext) {
+    init(title: String, artist: Artist, new: Bool, becomesOld: NSDate?, context: NSManagedObjectContext) {
         let entity = NSEntityDescription.entityForName("Track", inManagedObjectContext: context)!
         super.init(entity: entity, insertIntoManagedObjectContext: context)
         

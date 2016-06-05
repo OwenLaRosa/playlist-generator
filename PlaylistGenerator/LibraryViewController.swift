@@ -50,7 +50,7 @@ extension LibraryViewController: NSTableViewDelegate {
         if tableColumn == tableView.tableColumns[0] {
             cell.textField?.stringValue = track.title
         } else if tableColumn == tableView.tableColumns[1] {
-            cell.textField?.stringValue = track.artist
+            cell.textField?.stringValue = track.artist.name
         } else if tableColumn == tableView.tableColumns[2] {
             cell.textField?.stringValue = track.type
         }
