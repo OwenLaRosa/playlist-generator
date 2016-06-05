@@ -40,6 +40,10 @@ class AddTrackViewController: NSViewController {
         typeComboBox.addItemsWithObjectValues(categoryNames)
     }
     
+    @IBAction func newCheckBoxDidChange(sender: AnyObject) {
+        becomesOldTextField.enabled = newCheckBox.state == 1
+    }
+    
     @IBAction func cancelButton(sender: AnyObject) {
         dismissController(nil)
     }
