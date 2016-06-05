@@ -4,17 +4,22 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="artist" inverseEntity="Track" syncable="YES"/>
     </entity>
+    <entity name="Category" representedClassName=".Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="type" inverseEntity="Track" syncable="YES"/>
+    </entity>
     <entity name="Track" representedClassName=".Track" syncable="YES">
         <attribute name="becomesOld" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="firstAdded" attributeType="Date" syncable="YES"/>
         <attribute name="lastPlayed" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="new" attributeType="Boolean" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <attribute name="type" attributeType="String" syncable="YES"/>
         <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artist" inverseName="tracks" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="tracks" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
         <element name="Track" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Artist" positionX="-63" positionY="36" width="128" height="75"/>
+        <element name="Category" positionX="-45" positionY="54" width="128" height="75"/>
     </elements>
 </model>

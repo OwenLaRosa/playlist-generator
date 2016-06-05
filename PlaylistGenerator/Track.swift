@@ -12,7 +12,7 @@ class Track: NSManagedObject {
     
     @NSManaged var title: String
     @NSManaged var artist: Artist
-    @NSManaged var type: String
+    @NSManaged var type: Category
     @NSManaged var new: Bool
     @NSManaged var firstAdded: NSDate
     @NSManaged var lastPlayed: NSDate?
@@ -30,7 +30,7 @@ class Track: NSManagedObject {
         self.artist = artist
         self.new = new
         self.becomesOld = becomesOld
-        self.type = ""
+        self.type = Category(name: "Other", context: context)
         self.lastPlayed = nil
         self.firstAdded = NSDate()
     }

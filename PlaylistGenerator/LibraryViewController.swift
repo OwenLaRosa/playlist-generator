@@ -52,7 +52,7 @@ extension LibraryViewController: NSTableViewDelegate {
         } else if tableColumn == tableView.tableColumns[1] {
             cell.textField?.stringValue = track.artist.name
         } else if tableColumn == tableView.tableColumns[2] {
-            cell.textField?.stringValue = track.type
+            cell.textField?.stringValue = track.type.name
         }
         return nil
     }
