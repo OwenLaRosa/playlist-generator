@@ -803,7 +803,7 @@
                                                             <rect key="frame" x="409" y="1" width="64" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-39-dgI">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-39-dgI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Fkt-tL-EiX">
                                                                         <font key="font" metaFont="system"/>
@@ -812,6 +812,11 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="Ld9-39-dgI" secondAttribute="trailing" constant="-34" id="Ksn-S9-m8R"/>
+                                                                <constraint firstItem="Ld9-39-dgI" firstAttribute="leading" secondItem="FBP-di-Jt5" secondAttribute="leading" constant="2" id="Whu-M2-fCH"/>
+                                                                <constraint firstItem="Ld9-39-dgI" firstAttribute="centerY" secondItem="FBP-di-Jt5" secondAttribute="centerY" id="t7M-lh-xaB"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="Ld9-39-dgI" id="0jo-3y-HVy"/>
                                                             </connections>
@@ -850,7 +855,7 @@
                                     <segue destination="JLp-iA-cwO" kind="modal" id="mTL-mP-VSJ"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-cI-1IE">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-cI-1IE">
                                 <rect key="frame" x="116" y="13" width="101" height="32"/>
                                 <buttonCell key="cell" type="push" title="Edit Track" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wjx-bY-G1b">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -860,7 +865,7 @@
                                     <action selector="editTrackButtonTapped:" target="Nj5-Pp-Fq0" id="hWa-YB-mTv"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-mw-dW5">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-mw-dW5">
                                 <rect key="frame" x="217" y="13" width="121" height="32"/>
                                 <buttonCell key="cell" type="push" title="RemoveTrack" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UEw-Xf-pNY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -875,9 +880,13 @@
                             <constraint firstItem="cL0-kO-W5P" firstAttribute="top" secondItem="MAB-Na-R4d" secondAttribute="top" constant="20" symbolic="YES" id="4Io-AU-Idz"/>
                             <constraint firstAttribute="bottom" secondItem="xVF-Np-GLZ" secondAttribute="bottom" constant="20" symbolic="YES" id="M7L-Hj-Dgw"/>
                             <constraint firstItem="xVF-Np-GLZ" firstAttribute="leading" secondItem="cL0-kO-W5P" secondAttribute="leading" id="OeZ-1b-6cA"/>
+                            <constraint firstItem="D8Z-mw-dW5" firstAttribute="leading" secondItem="HFW-cI-1IE" secondAttribute="trailing" constant="12" symbolic="YES" id="SS1-Ki-9dg"/>
                             <constraint firstAttribute="bottom" secondItem="cL0-kO-W5P" secondAttribute="bottom" constant="47" id="ViQ-44-lAa"/>
+                            <constraint firstItem="HFW-cI-1IE" firstAttribute="leading" secondItem="xVF-Np-GLZ" secondAttribute="trailing" constant="12" symbolic="YES" id="WlD-2j-MCK"/>
                             <constraint firstItem="cL0-kO-W5P" firstAttribute="leading" secondItem="MAB-Na-R4d" secondAttribute="leading" constant="20" symbolic="YES" id="iBZ-Q4-rsw"/>
                             <constraint firstAttribute="trailing" secondItem="cL0-kO-W5P" secondAttribute="trailing" constant="20" symbolic="YES" id="sgU-as-ZtC"/>
+                            <constraint firstItem="HFW-cI-1IE" firstAttribute="baseline" secondItem="D8Z-mw-dW5" secondAttribute="baseline" id="wUC-g7-Xmc"/>
+                            <constraint firstItem="HFW-cI-1IE" firstAttribute="baseline" secondItem="xVF-Np-GLZ" secondAttribute="baseline" id="yLR-hd-xay"/>
                         </constraints>
                     </view>
                     <connections>
