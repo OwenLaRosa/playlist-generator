@@ -850,6 +850,26 @@
                                     <segue destination="JLp-iA-cwO" kind="modal" id="mTL-mP-VSJ"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-cI-1IE">
+                                <rect key="frame" x="116" y="13" width="101" height="32"/>
+                                <buttonCell key="cell" type="push" title="Edit Track" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wjx-bY-G1b">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editTrackButtonTapped:" target="Nj5-Pp-Fq0" id="hWa-YB-mTv"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-mw-dW5">
+                                <rect key="frame" x="217" y="13" width="121" height="32"/>
+                                <buttonCell key="cell" type="push" title="RemoveTrack" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UEw-Xf-pNY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="removeTrackButtonTapped:" target="Nj5-Pp-Fq0" id="eiS-My-GDR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cL0-kO-W5P" firstAttribute="top" secondItem="MAB-Na-R4d" secondAttribute="top" constant="20" symbolic="YES" id="4Io-AU-Idz"/>
@@ -861,6 +881,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editTrackButton" destination="HFW-cI-1IE" id="g17-zV-N7l"/>
+                        <outlet property="removeTrackButton" destination="D8Z-mw-dW5" id="hYl-pF-WWa"/>
                         <outlet property="tableView" destination="93a-BN-bfL" id="czA-Wr-nDN"/>
                     </connections>
                 </viewController>

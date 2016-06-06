@@ -12,6 +12,10 @@ class LibraryViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     
+    @IBOutlet weak var editTrackButton: NSButton!
+    
+    @IBOutlet weak var removeTrackButton: NSButton!
+    
     var tracks = [Track]()
     let context = (NSApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
@@ -26,6 +30,12 @@ class LibraryViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    @IBAction func editTrackButtonTapped(sender: AnyObject) {
+    }
+    
+    @IBAction func removeTrackButtonTapped(sender: AnyObject) {
     }
 
 }
