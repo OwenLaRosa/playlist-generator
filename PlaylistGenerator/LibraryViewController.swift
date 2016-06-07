@@ -17,6 +17,7 @@ class LibraryViewController: NSViewController {
     @IBOutlet weak var removeTrackButton: NSButton!
     
     var tracks = [Track]()
+    var selectedTrack: Track!
     let context = (NSApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     override func viewDidLoad() {
@@ -36,6 +37,12 @@ class LibraryViewController: NSViewController {
     }
     
     @IBAction func removeTrackButtonTapped(sender: AnyObject) {
+        tracks.removeAtIndex(tableView.selectedRow)
+        context.deleteObject(selectedTrack)
+        do {
+            try context.save()
+        } catch {}
+        tableView.reloadData()
     }
 
 }
@@ -65,6 +72,10 @@ extension LibraryViewController: NSTableViewDelegate {
             cell.textField?.stringValue = track.type.name
         }
         return cell
+    }
+    
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        selectedTrack = tracks[tableView.selectedRow]
     }
     
 }
