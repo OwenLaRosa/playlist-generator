@@ -91,7 +91,7 @@ class AddTrackViewController: NSViewController {
         } else {
             category = getCategoryWithName(typeComboBox.stringValue)
         }
-        let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue)) : nil
+        let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 86400 * Double(becomesOldTextField.intValue)) : nil
         let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
         track.type = category
         do {
@@ -129,7 +129,7 @@ class AddTrackViewController: NSViewController {
         }
         editTrack.type = category
         editTrack.new = newCheckBox.state == 1
-        //let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue)) : nil
+        //let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 86400 * Double(becomesOldTextField.intValue)) : nil
         //let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
         do {
             try context.save()
