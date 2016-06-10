@@ -34,6 +34,7 @@ class LibraryViewController: NSViewController {
     }
     
     @IBAction func editTrackButtonTapped(sender: AnyObject) {
+        performSegueWithIdentifier("AddTrack", sender: selectedTrack)
     }
     
     @IBAction func removeTrackButtonTapped(sender: AnyObject) {
@@ -43,6 +44,15 @@ class LibraryViewController: NSViewController {
             try context.save()
         } catch {}
         tableView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddTrack" {
+            let destinationVC = segue.destinationController as! AddTrackViewController
+            if let editTrack = sender as? Track {
+                destinationVC.editTrack = editTrack
+            }
+        }
     }
 
 }
