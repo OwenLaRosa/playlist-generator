@@ -25,6 +25,8 @@ class AddTrackViewController: NSViewController {
     var artistNames = [String]()
     var categoryNames = [String]()
     
+    var editTrack: Track!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,14 @@ class AddTrackViewController: NSViewController {
         }
         artistComboBox.addItemsWithObjectValues(artistNames)
         typeComboBox.addItemsWithObjectValues(categoryNames)
+        
+        if editTrack != nil {
+            titleTextField.stringValue = editTrack.title
+            artistComboBox.stringValue = editTrack.artist.name
+            typeComboBox.stringValue = editTrack.type.name
+            newCheckBox.state = editTrack.new ? 1 : 0
+            //becomesOldTextField.intValue = (NSDate().timeIntervalSinceDate(editTrack.firstAdded) / 86400
+        }
     }
     
     @IBAction func newCheckBoxDidChange(sender: AnyObject) {
@@ -49,6 +59,10 @@ class AddTrackViewController: NSViewController {
     }
     
     @IBAction func addButton(sender: AnyObject) {
+        if editTrack != nil {
+            saveEditedTrackPropertes()
+            return
+        }
         if titleTextField.stringValue == "" || artistComboBox.stringValue == "" || typeComboBox.stringValue == "" {
             let alert = NSAlert()
             alert.alertStyle = .InformationalAlertStyle
@@ -96,6 +110,31 @@ class AddTrackViewController: NSViewController {
         let fetchRequest = NSFetchRequest(entityName: "Category")
         fetchRequest.predicate = NSPredicate(format: "name == %@", name)
         return try! context.executeFetchRequest(fetchRequest)[0] as! Category
+    }
+    
+    private func saveEditedTrackPropertes() {
+        var artist: Artist
+        var category: Category
+        editTrack.title = titleTextField.stringValue
+        if !artistNames.contains(artistComboBox.stringValue) {
+            artist = Artist(name: artistComboBox.stringValue, context: context)
+        } else {
+            artist = getArtistWithName(artistComboBox.stringValue)
+        }
+        editTrack.artist = artist
+        if !categoryNames.contains(typeComboBox.stringValue) {
+            category = Category(name: typeComboBox.stringValue, context: context)
+        } else {
+            category = getCategoryWithName(typeComboBox.stringValue)
+        }
+        editTrack.type = category
+        editTrack.new = newCheckBox.state == 1
+        //let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 3576 * Double(becomesOldTextField.intValue)) : nil
+        //let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
+        do {
+            try context.save()
+        } catch {}
+        dismissController(nil)
     }
     
 }
