@@ -852,7 +852,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="JLp-iA-cwO" kind="modal" id="mTL-mP-VSJ"/>
+                                    <segue destination="JLp-iA-cwO" kind="modal" identifier="AddTrack" id="mTL-mP-VSJ"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-cI-1IE">
