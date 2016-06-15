@@ -981,7 +981,7 @@
                                         </textField>
                                         <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiI-kT-Tcf">
                                             <rect key="frame" x="109" y="14" width="97" height="27"/>
-                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Q0K-Rz-SRD">
+                                            <datePickerCell key="cell" enabled="NO" borderStyle="bezel" alignment="left" id="Q0K-Rz-SRD">
                                                 <font key="font" metaFont="system"/>
                                                 <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
                                                     <!--1982-02-12 08:00:00 -0800-->
