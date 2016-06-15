@@ -34,6 +34,14 @@ class LibraryViewController: NSViewController {
     }
     
     @IBAction func editTrackButtonTapped(sender: AnyObject) {
+        if selectedTrack == nil {
+            let alert = NSAlert()
+            alert.alertStyle = .InformationalAlertStyle
+            alert.messageText = "Oops!"
+            alert.informativeText = "Please select a track in order to edit."
+            alert.runModal()
+            return
+        }
         performSegueWithIdentifier("AddTrack", sender: selectedTrack)
     }
     
