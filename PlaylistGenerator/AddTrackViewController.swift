@@ -20,7 +20,8 @@ class AddTrackViewController: NSViewController {
     
     @IBOutlet weak var newCheckBox: NSButton!
     
-    @IBOutlet weak var becomesOldTextField: NSTextField!
+    //@IBOutlet weak var becomesOldTextField: NSTextField!
+    @IBOutlet weak var becomesOldDatePicker: NSDatePicker!
     
     var artistNames = [String]()
     var categoryNames = [String]()
@@ -51,7 +52,7 @@ class AddTrackViewController: NSViewController {
     }
     
     @IBAction func newCheckBoxDidChange(sender: AnyObject) {
-        becomesOldTextField.enabled = newCheckBox.state == 1
+        becomesOldDatePicker.enabled = newCheckBox.state == 1
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
@@ -71,7 +72,7 @@ class AddTrackViewController: NSViewController {
             alert.runModal()
             return
         }
-        if newCheckBox.state == 1 && becomesOldTextField.intValue <= 0 {
+        if newCheckBox.state == 1 {
             let alert = NSAlert()
             alert.alertStyle = .InformationalAlertStyle
             alert.messageText = "Oops!"
@@ -91,7 +92,7 @@ class AddTrackViewController: NSViewController {
         } else {
             category = getCategoryWithName(typeComboBox.stringValue)
         }
-        let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 86400 * Double(becomesOldTextField.intValue)) : nil
+        let becomesOld: NSDate? = newCheckBox.state == 1 ? becomesOldDatePicker.dateValue : nil
         let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
         track.type = category
         do {
@@ -129,8 +130,8 @@ class AddTrackViewController: NSViewController {
         }
         editTrack.type = category
         editTrack.new = newCheckBox.state == 1
-        //let becomesOld: NSDate? = newCheckBox.state == 1 ? NSDate(timeIntervalSinceNow: 86400 * Double(becomesOldTextField.intValue)) : nil
-        //let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
+        let becomesOld: NSDate? = newCheckBox.state == 1 ? becomesOldDatePicker.dateValue : nil
+        let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
         do {
             try context.save()
         } catch {}
