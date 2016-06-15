@@ -136,8 +136,7 @@ class AddTrackViewController: NSViewController {
         }
         editTrack.type = category
         editTrack.new = newCheckBox.state == 1
-        let becomesOld: NSDate? = newCheckBox.state == 1 ? becomesOldDatePicker.dateValue : nil
-        let track = Track(title: titleTextField.stringValue, artist: artist, new: newCheckBox.state == 1, becomesOld: becomesOld, context: context)
+        editTrack.becomesOld = newCheckBox.state == 1 ? becomesOldDatePicker.dateValue : nil
         do {
             try context.save()
         } catch {}
