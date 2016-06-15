@@ -42,12 +42,18 @@ class AddTrackViewController: NSViewController {
         artistComboBox.addItemsWithObjectValues(artistNames)
         typeComboBox.addItemsWithObjectValues(categoryNames)
         
+        // set the default date when "new" status expires
+        // 2,592,000 is one month from now in seconds
+        let defaultBecomesOldDate = NSDate(timeInterval: 2592000, sinceDate: NSDate())
+        
         if editTrack != nil {
             titleTextField.stringValue = editTrack.title
             artistComboBox.stringValue = editTrack.artist.name
             typeComboBox.stringValue = editTrack.type.name
             newCheckBox.state = editTrack.new ? 1 : 0
-            //becomesOldTextField.intValue = (NSDate().timeIntervalSinceDate(editTrack.firstAdded) / 86400
+            becomesOldDatePicker.dateValue = editTrack.becomesOld ?? defaultBecomesOldDate
+        } else {
+            becomesOldDatePicker.dateValue = defaultBecomesOldDate
         }
     }
     
