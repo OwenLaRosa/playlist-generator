@@ -93,6 +93,8 @@ extension LibraryViewController: NSTableViewDelegate {
     }
     
     func tableViewSelectionDidChange(notification: NSNotification) {
+        editTrackButton.enabled = true
+        removeTrackButton.enabled = true
         selectedTrack = tracks[tableView.selectedRow]
     }
     

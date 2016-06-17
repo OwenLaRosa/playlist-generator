@@ -857,7 +857,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-cI-1IE">
                                 <rect key="frame" x="116" y="13" width="101" height="32"/>
-                                <buttonCell key="cell" type="push" title="Edit Track" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wjx-bY-G1b">
+                                <buttonCell key="cell" type="push" title="Edit Track" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wjx-bY-G1b">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -867,7 +867,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-mw-dW5">
                                 <rect key="frame" x="217" y="13" width="121" height="32"/>
-                                <buttonCell key="cell" type="push" title="RemoveTrack" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UEw-Xf-pNY">
+                                <buttonCell key="cell" type="push" title="RemoveTrack" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UEw-Xf-pNY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
