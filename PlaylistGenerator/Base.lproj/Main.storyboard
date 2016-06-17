@@ -1032,6 +1032,7 @@ Gw
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="G3N-Us-xw8" id="bma-nH-hSD"/>
                         <outlet property="artistComboBox" destination="t0T-90-1AK" id="x6E-uP-etb"/>
                         <outlet property="becomesOldDatePicker" destination="hiI-kT-Tcf" id="n1t-Kw-M7a"/>
                         <outlet property="newCheckBox" destination="uDv-9f-CMg" id="gSy-PF-k9L"/>

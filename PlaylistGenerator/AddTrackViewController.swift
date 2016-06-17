@@ -23,6 +23,8 @@ class AddTrackViewController: NSViewController {
     //@IBOutlet weak var becomesOldTextField: NSTextField!
     @IBOutlet weak var becomesOldDatePicker: NSDatePicker!
     
+    @IBOutlet weak var addButton: NSButton!
+    
     var artistNames = [String]()
     var categoryNames = [String]()
     
@@ -47,6 +49,9 @@ class AddTrackViewController: NSViewController {
         let defaultBecomesOldDate = NSDate(timeInterval: 2592000, sinceDate: NSDate())
         
         if editTrack != nil {
+            title = "Edit Track"
+            addButton.title = "Save"
+            
             titleTextField.stringValue = editTrack.title
             artistComboBox.stringValue = editTrack.artist.name
             typeComboBox.stringValue = editTrack.type.name
