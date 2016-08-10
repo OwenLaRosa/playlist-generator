@@ -13,6 +13,7 @@
 		5A08FF6A1D036BF500D6C66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A08FF691D036BF500D6C66A /* Assets.xcassets */; };
 		5A08FF6D1D036BF500D6C66A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A08FF6B1D036BF500D6C66A /* Main.storyboard */; };
 		5A08FF751D036DA300D6C66A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08FF741D036DA200D6C66A /* Track.swift */; };
+		5A26029A1D5B6E9600C861B4 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2602991D5B6E9600C861B4 /* GenerateViewController.swift */; };
 		5AAF51D41D04880B000B72D9 /* AddTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF51D31D04880B000B72D9 /* AddTrackViewController.swift */; };
 		5AAF51D61D048BEE000B72D9 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF51D51D048BEE000B72D9 /* Artist.swift */; };
 		5AAF51D81D048ECD000B72D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF51D71D048ECD000B72D9 /* Category.swift */; };
@@ -27,6 +28,7 @@
 		5A08FF6C1D036BF500D6C66A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A08FF6E1D036BF500D6C66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A08FF741D036DA200D6C66A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		5A2602991D5B6E9600C861B4 /* GenerateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 		5AAF51D31D04880B000B72D9 /* AddTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrackViewController.swift; sourceTree = "<group>"; };
 		5AAF51D51D048BEE000B72D9 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		5AAF51D71D048ECD000B72D9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				5AAF51D31D04880B000B72D9 /* AddTrackViewController.swift */,
 				5A08FF6E1D036BF500D6C66A /* Info.plist */,
 				5A08FF661D036BF500D6C66A /* PlaylistGenerator.xcdatamodeld */,
+				5A2602991D5B6E9600C861B4 /* GenerateViewController.swift */,
 			);
 			path = PlaylistGenerator;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AAF51D61D048BEE000B72D9 /* Artist.swift in Sources */,
+				5A26029A1D5B6E9600C861B4 /* GenerateViewController.swift in Sources */,
 				5A08FF651D036BF500D6C66A /* LibraryViewController.swift in Sources */,
 				5AAF51D41D04880B000B72D9 /* AddTrackViewController.swift in Sources */,
 				5A08FF631D036BF500D6C66A /* AppDelegate.swift in Sources */,
