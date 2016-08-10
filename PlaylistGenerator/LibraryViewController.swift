@@ -46,6 +46,17 @@ class LibraryViewController: NSViewController {
     }
     
     @IBAction func removeTrackButtonTapped(sender: AnyObject) {
+        
+        let alert = NSAlert()
+        alert.messageText = "Confirm Deletion"
+        alert.informativeText = "This action will delete the track from your library and cannot be undone. Are you sure you would like to delete \"\(selectedTrack.title)\" by \(selectedTrack.artist.name)?"
+        alert.addButtonWithTitle("Delete")
+        alert.addButtonWithTitle("Cancel")
+        alert.buttons[0].action = #selector(self.deleteSelectedTrack)
+        alert.runModal()
+    }
+    
+    func deleteSelectedTrack() {
         tracks.removeAtIndex(tableView.selectedRow)
         context.deleteObject(selectedTrack)
         do {
