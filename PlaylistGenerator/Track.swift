@@ -30,7 +30,6 @@ class Track: NSManagedObject {
         self.artist = artist
         self.new = new
         self.becomesOld = becomesOld
-        self.type = Category(name: "Other", context: context)
         self.lastPlayed = nil
         self.firstAdded = NSDate()
     }
