@@ -23,14 +23,23 @@ class LibraryViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let fetchRequest = NSFetchRequest(entityName: "Track")
-        tracks = try! context.executeFetchRequest(fetchRequest) as! [Track]
+        updateData()
     }
 
     override var representedObject: AnyObject? {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LibraryViewController.updateData), name: UPDATE_TRACKS_NOTIFICATION, object: nil)
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     @IBAction func editTrackButtonTapped(sender: AnyObject) {
@@ -52,17 +61,21 @@ class LibraryViewController: NSViewController {
         alert.informativeText = "This action will delete the track from your library and cannot be undone. Are you sure you would like to delete \"\(selectedTrack.title)\" by \(selectedTrack.artist.name)?"
         alert.addButtonWithTitle("Delete")
         alert.addButtonWithTitle("Cancel")
-        alert.buttons[0].action = #selector(self.deleteSelectedTrack)
+        alert.buttons[0].target = self
+        alert.buttons[0].action = #selector(LibraryViewController.deleteSelectedTrack)
         alert.runModal()
     }
     
     func deleteSelectedTrack() {
         tracks.removeAtIndex(tableView.selectedRow)
         context.deleteObject(selectedTrack)
+        selectedTrack = nil
+        removeTrackButton.enabled = false
         do {
             try context.save()
         } catch {}
         tableView.reloadData()
+        //updateData()
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -72,6 +85,12 @@ class LibraryViewController: NSViewController {
                 destinationVC.editTrack = editTrack
             }
         }
+    }
+    
+    func updateData() {
+        let fetchRequest = NSFetchRequest(entityName: "Track")
+        tracks = try! context.executeFetchRequest(fetchRequest) as! [Track]
+        tableView.reloadData()
     }
 
 }

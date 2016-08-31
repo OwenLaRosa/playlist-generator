@@ -8,6 +8,8 @@
 
 import Cocoa
 
+let UPDATE_TRACKS_NOTIFICATION = "com.owenlarosa.playlistgenerator.updatetracks"
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 

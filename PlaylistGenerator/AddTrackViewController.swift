@@ -110,6 +110,7 @@ class AddTrackViewController: NSViewController {
             try context.save()
         } catch {}
         dismissController(nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_TRACKS_NOTIFICATION, object: nil)
     }
     
     private func getArtistWithName(name: String) -> Artist {
@@ -146,6 +147,7 @@ class AddTrackViewController: NSViewController {
             try context.save()
         } catch {}
         dismissController(nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_TRACKS_NOTIFICATION, object: nil)
     }
     
 }
