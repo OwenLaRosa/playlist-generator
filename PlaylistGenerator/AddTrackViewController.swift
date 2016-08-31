@@ -84,12 +84,16 @@ class AddTrackViewController: NSViewController {
             return
         }
         if newCheckBox.state == 1 {
-            let alert = NSAlert()
-            alert.alertStyle = .InformationalAlertStyle
-            alert.messageText = "Oops!"
-            alert.informativeText = "New tracks must remain new for at least 1 day."
-            alert.runModal()
-            return
+            if becomesOldDatePicker.dateValue.timeIntervalSinceDate(NSDate()) <  86400 {
+                let alert = NSAlert()
+                alert.alertStyle = .InformationalAlertStyle
+                alert.messageText = "Oops!"
+                alert.informativeText = "New tracks must remain new for at least 1 day."
+                alert.runModal()
+                return
+            }
+            
+            
         }
         var artist: Artist
         var category: Category
