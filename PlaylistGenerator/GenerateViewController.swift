@@ -26,6 +26,7 @@ class GenerateViewController: NSViewController {
             ($0 as! Category).name
         }
         typeNames.append("New")
+        typeNames.append("Artist")
         typePopupButton.removeAllItems()
         typePopupButton.addItemsWithTitles(typeNames)
     }
