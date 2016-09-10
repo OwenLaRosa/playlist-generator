@@ -1049,17 +1049,17 @@ Gw
             <objects>
                 <viewController id="TMU-MX-oaJ" customClass="GenerateViewController" customModule="PlaylistGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Ruc-id-3Ml">
-                        <rect key="frame" x="0.0" y="0.0" width="338" height="228"/>
+                        <rect key="frame" x="0.0" y="0.0" width="387" height="228"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-gR-ipl">
-                                <rect key="frame" x="20" y="51" width="298" height="157"/>
+                                <rect key="frame" x="20" y="51" width="347" height="157"/>
                                 <clipView key="contentView" id="tUP-MY-5ui">
-                                    <rect key="frame" x="1" y="0.0" width="296" height="156"/>
+                                    <rect key="frame" x="1" y="0.0" width="345" height="156"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="5Ko-ON-Tzu" viewBased="YES" id="pex-eq-V1n">
-                                            <rect key="frame" x="0.0" y="0.0" width="296" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1120,7 +1120,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="5Ko-ON-Tzu">
-                                    <rect key="frame" x="0.0" y="0.0" width="296" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -1159,7 +1159,7 @@ Gw
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZoS-e6-gC5">
-                                <rect key="frame" x="242" y="13" width="82" height="32"/>
+                                <rect key="frame" x="291" y="13" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eDp-UO-Cle">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1174,17 +1174,17 @@ Gw
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="l4B-6H-B3t" secondAttribute="bottom" constant="20" symbolic="YES" id="5Fv-7t-T7t"/>
-                            <constraint firstItem="7Wh-fI-zZH" firstAttribute="baseline" secondItem="ZoS-e6-gC5" secondAttribute="baseline" id="IFb-BE-kEZ"/>
+                            <constraint firstItem="7Wh-fI-zZH" firstAttribute="baseline" secondItem="ZoS-e6-gC5" secondAttribute="baseline" id="Iwn-pF-Yme"/>
                             <constraint firstItem="2aB-gR-ipl" firstAttribute="top" secondItem="Ruc-id-3Ml" secondAttribute="top" constant="20" symbolic="YES" id="MEv-Mc-XmY"/>
                             <constraint firstItem="2aB-gR-ipl" firstAttribute="leading" secondItem="l4B-6H-B3t" secondAttribute="leading" id="Xid-cF-hkJ"/>
+                            <constraint firstItem="ZoS-e6-gC5" firstAttribute="trailing" secondItem="2aB-gR-ipl" secondAttribute="trailing" id="YNu-rH-zU1"/>
                             <constraint firstItem="k2o-Zv-YJE" firstAttribute="leading" secondItem="l4B-6H-B3t" secondAttribute="trailing" constant="8" symbolic="YES" id="Zvo-8b-XLd"/>
-                            <constraint firstItem="7Wh-fI-zZH" firstAttribute="leading" secondItem="k2o-Zv-YJE" secondAttribute="trailing" constant="5" id="amo-PR-tnh"/>
                             <constraint firstItem="2aB-gR-ipl" firstAttribute="leading" secondItem="Ruc-id-3Ml" secondAttribute="leading" constant="20" symbolic="YES" id="djh-hK-j2M"/>
-                            <constraint firstItem="k2o-Zv-YJE" firstAttribute="baseline" secondItem="7Wh-fI-zZH" secondAttribute="baseline" id="jUo-DM-3S1"/>
                             <constraint firstItem="l4B-6H-B3t" firstAttribute="baseline" secondItem="k2o-Zv-YJE" secondAttribute="baseline" id="jXx-ke-Y5a"/>
+                            <constraint firstItem="7Wh-fI-zZH" firstAttribute="leading" secondItem="k2o-Zv-YJE" secondAttribute="trailing" constant="5" id="kNb-ki-NTa"/>
                             <constraint firstItem="l4B-6H-B3t" firstAttribute="top" secondItem="2aB-gR-ipl" secondAttribute="bottom" constant="10" id="lRb-dj-Rph"/>
+                            <constraint firstItem="7Wh-fI-zZH" firstAttribute="baseline" secondItem="k2o-Zv-YJE" secondAttribute="baseline" id="mZs-dJ-oCb"/>
                             <constraint firstAttribute="trailing" secondItem="2aB-gR-ipl" secondAttribute="trailing" constant="20" symbolic="YES" id="nts-lQ-NsT"/>
-                            <constraint firstItem="2aB-gR-ipl" firstAttribute="trailing" secondItem="ZoS-e6-gC5" secondAttribute="trailing" id="sSe-nU-MaK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1194,7 +1194,7 @@ Gw
                 </viewController>
                 <customObject id="7j9-kl-HLe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="569"/>
+            <point key="canvasLocation" x="1910.5" y="569"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="a9b-Ve-DDp">
