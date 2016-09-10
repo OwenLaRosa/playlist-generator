@@ -108,6 +108,9 @@ class GenerateViewController: NSViewController {
         for i in playlistItems {
             print(i)
         }
+        generatedPlaylist = playlistItems
+        NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_PLAYLIST_NOTIFICATION, object: nil)
+        dismissController(nil)
     }
     
     // MARK: - Fetch Requests

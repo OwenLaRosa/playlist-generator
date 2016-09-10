@@ -1199,7 +1199,7 @@ Gw
         <!--Playlist-->
         <scene sceneID="a9b-Ve-DDp">
             <objects>
-                <viewController title="Playlist" id="Snx-hl-gP7" sceneMemberID="viewController">
+                <viewController title="Playlist" id="Snx-hl-gP7" customClass="PlaylistViewController" customModule="PlaylistGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="JE0-0r-9cs">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1230,7 +1230,7 @@ Gw
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="maz-RD-UMY">
+                                                        <tableCellView identifier="PlaylistCell" id="maz-RD-UMY">
                                                             <rect key="frame" x="1" y="1" width="116" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1294,6 +1294,10 @@ Gw
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Snx-hl-gP7" id="e9k-gL-yDJ"/>
+                                                <outlet property="delegate" destination="Snx-hl-gP7" id="afD-Qs-rLo"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1331,6 +1335,9 @@ Gw
                             <constraint firstItem="UpA-MO-K2g" firstAttribute="top" secondItem="JE0-0r-9cs" secondAttribute="top" constant="20" symbolic="YES" id="xOT-6h-uYT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="4G0-ZG-mnh" id="4wO-eT-7xK"/>
+                    </connections>
                 </viewController>
                 <customObject id="1EI-hp-AMF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

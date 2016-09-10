@@ -9,6 +9,9 @@
 import Cocoa
 
 let UPDATE_TRACKS_NOTIFICATION = "com.owenlarosa.playlistgenerator.updatetracks"
+let UPDATE_PLAYLIST_NOTIFICATION = "com.owenlarosa.playlistgenerator.updatePlaylist"
+
+var generatedPlaylist = [String]()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
