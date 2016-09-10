@@ -652,7 +652,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Playlist Generator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -666,10 +666,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Playlist Generator-->
         <scene sceneID="BpN-WE-zEp">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="3ay-dW-h23" sceneMemberID="viewController">
+                <tabViewController title="Playlist Generator" selectedTabViewItemIndex="1" id="3ay-dW-h23" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="HUV-UC-Saz"/>
                         <tabViewItem identifier="" id="HFY-FP-McC"/>
@@ -1044,10 +1044,10 @@ Gw
             </objects>
             <point key="canvasLocation" x="1942" y="223.5"/>
         </scene>
-        <!--Generate View Controller-->
+        <!--Generate Playlist-->
         <scene sceneID="mdf-tM-nh1">
             <objects>
-                <viewController id="TMU-MX-oaJ" customClass="GenerateViewController" customModule="PlaylistGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Generate Playlist" id="TMU-MX-oaJ" customClass="GenerateViewController" customModule="PlaylistGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Ruc-id-3Ml">
                         <rect key="frame" x="0.0" y="0.0" width="387" height="228"/>
                         <autoresizingMask key="autoresizingMask"/>
