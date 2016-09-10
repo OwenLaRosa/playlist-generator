@@ -11,7 +11,7 @@ import Cocoa
 class Category: NSManagedObject {
     
     @NSManaged var name: String
-    @NSManaged var tracks: [Track]
+    @NSManaged var tracks: NSSet
     
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)

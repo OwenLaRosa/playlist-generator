@@ -87,10 +87,11 @@ class GenerateViewController: NSViewController {
                     usedArtists.append(artist)
                 }
             } else {
-                if let availableTracks = categoryTable[i]?.tracks.filter({
+                if let availableTracks = (categoryTable[i]?.tracks.allObjects as? [Track])?.filter({
                     !usedArtists.contains($0.artist)
                 }) {
-                    if availableTracks.count == 0 {
+                    print("available tracks: \(availableTracks.count)")
+                    if availableTracks.count != 0 {
                         let track = availableTracks[Int(arc4random()) % availableTracks.count]
                         playlistItems.append("\(track.title) - \(track.artist.name)")
                         usedArtists.append(track.artist)
