@@ -54,9 +54,9 @@ class GenerateViewController: NSViewController {
             print(i)
         }
         
-        var artists = getArtists()
+        let artists = getArtists()
         var categoryTable = getCategories()
-        var newTracks = getNewTracks()
+        let newTracks = getNewTracks()
         print("artists: \(artists.count)")
         print("newTracks: \(newTracks.count)")
         for i in selectedTypeNames {

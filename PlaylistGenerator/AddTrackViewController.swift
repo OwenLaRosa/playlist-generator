@@ -77,7 +77,7 @@ class AddTrackViewController: NSViewController {
         }
         if titleTextField.stringValue == "" || artistComboBox.stringValue == "" || typeComboBox.stringValue == "" {
             let alert = NSAlert()
-            alert.alertStyle = .InformationalAlertStyle
+            alert.alertStyle = .Informational
             alert.messageText = "Oops!"
             alert.informativeText = "One or more required fields are empty. Please try again."
             alert.runModal()
@@ -86,7 +86,7 @@ class AddTrackViewController: NSViewController {
         if newCheckBox.state == 1 {
             if becomesOldDatePicker.dateValue.timeIntervalSinceDate(NSDate()) <  86400 {
                 let alert = NSAlert()
-                alert.alertStyle = .InformationalAlertStyle
+                alert.alertStyle = .Informational
                 alert.messageText = "Oops!"
                 alert.informativeText = "New tracks must remain new for at least 1 day."
                 alert.runModal()
